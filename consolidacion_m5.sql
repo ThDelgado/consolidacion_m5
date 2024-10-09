@@ -29,12 +29,12 @@ INSERT INTO staff (first_name,last_name, address_id, email, store_id, active, us
 ('Juan','Perez', 604, 'jperez@loqsea@gmail.com', 1, true, 'jperez', 'Jp123$',null);
 
 -- modificar staff
-UPDATE staff SET email = 'juanperez@loqsea.com', last_update= CURRENT_TIMESTAMP
+UPDATE staff SET email = 'juanperez@loqsea.com'
 WHERE staff_id = 3;
 
 -- ELIMINAR UN STAFF
 
-UPDATE staff SET active= false,last_update= CURRENT_TIMESTAMP
+UPDATE staff SET active= false
 WHERE staff_id= 3;
 
 
@@ -54,7 +54,7 @@ WHERE customer_id=601;
 
 -- eliminar un customer
 
-UPDATE customer SET active= 0,last_update= CURRENT_TIMESTAMP
+UPDATE customer SET active= 0
 WHERE customer_id=601;
 
 --INSERTAR UN ACTOR
@@ -63,7 +63,7 @@ INSERT INTO actor (first_name,last_name) VALUES
 ('Marco Antorio','Bandera');
 
 -- MODIFICAR UN ACTOR
-UPDATE actor SET last_name = 'Solis', last_update = CURRENT_TIMESTAMP
+UPDATE actor SET last_name = 'Solis'
 WHERE actor_id = 201; 
 
 
@@ -113,4 +113,4 @@ FROM
 WHERE 
     t1.TABLE_SCHEMA = 'public'
 ORDER BY
-    t1.TABLE_NAME
+    t1.TABLE_NAME ASC
